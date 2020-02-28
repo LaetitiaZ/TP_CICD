@@ -2,12 +2,19 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+
+
 terraform {
   backend "s3" {
     bucket = "tp-devops-efrei"
-    key    = "WebApache/dev/DeployInfra"
+    key    = var.S3StateKey
     region = "eu-west-1"
   }
+}
+
+variable "S3StateKey" {
+  type    = string
+  default = "/${var.app_name}/${var.env}/DeployInfra.tfstate"
 }
 
 variable "env" {
