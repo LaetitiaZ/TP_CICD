@@ -7,7 +7,6 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "tp-devops-efrei"
-    key    = var.S3StateKey
     region = "eu-west-1"
   }
 }
