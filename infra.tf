@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "tp-devops-efrei"
-    key    = "${var.app_name}/${var.env}/infra"
+    key    = "${var.app_name}/${var.env}/DeployInfra"
   }
 }
 
