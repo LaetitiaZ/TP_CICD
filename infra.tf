@@ -3,10 +3,7 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket = "tp-devops-efrei"
-    region = "eu-west-1"
-  }
+  backend "s3" {}
 }
 
 variable "env" {
