@@ -6,6 +6,7 @@ terraform {
   backend "s3" {
     bucket = "tp-devops-efrei"
     key    = "WebApache/dev/DeployInfra"
+    region = "eu-west-1"
   }
 }
 
