@@ -1,6 +1,8 @@
 provider "aws" {
   region = "eu-west-1"
 }
+backend "s3" {
+}
 
 variable "env" {
   type    = string
