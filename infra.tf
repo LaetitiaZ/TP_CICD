@@ -156,18 +156,18 @@ resource "aws_subnet" "subnet-private-3" {
 # Route Table
 ## Private
 ### Use Main Route Table
-resource "aws_default_route_table" "main-private" {
-  default_route_table_id = aws_vpc.vpc.default_route_table_id
-
-  route {
-    cidr_block  = "0.0.0.0/0"
-    instance_id = aws_instance.nat.id
-  }
-
-  tags = {
-    Name = "${var.env}-rt-main-private"
-  }
-}
+#resource "aws_default_route_table" "main-private" {
+#  default_route_table_id = aws_vpc.vpc.default_route_table_id
+#
+#  route {
+#    cidr_block  = "0.0.0.0/0"
+#    instance_id = aws_instance.nat.id
+#  }
+#
+#  tags = {
+#    Name = "${var.env}-rt-main-private"
+#  }
+#}
 
 ## Public
 resource "aws_route_table" "public" {
